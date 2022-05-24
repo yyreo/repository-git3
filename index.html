@@ -101,7 +101,8 @@
             </div>
           </div>
         </div>
-        <!-- <div class="p-slide">
+        <div class="p-slide">
+          <h1>TOPICS</h1>
           <ul class="p-slide-items">
             <li><a href=""><img class="p-slide-img" src="./assets/images/photo1.png" alt=""><p class="p-slide__txt">ITEM-01</p></a></li>
             <li><a href=""><img class="p-slide-img" src="./assets/images/photo1.png" alt=""><p class="p-slide__txt">ITEM-02</p></a></li>
@@ -111,14 +112,16 @@
             <li><a href=""><img class="p-slide-img" src="./assets/images/photo1.png" alt=""><p class="p-slide__txt">ITEM-06</p></a></li>
             <li><a href=""><img class="p-slide-img" src="./assets/images/photo1.png" alt=""><p class="p-slide__txt">ITEM-07</p></a></li>
           </ul>
-        </div> -->
+        </div>
         <div class="p-main__contents">
           <ul class="p-main__top">
             <li class="p-main__topList">
               <a href=""><img src="./assets/images/main.png" alt=""></a>
+              <p class="topList__txt">販売ページへ</p>
             </li>
             <li class="p-main__topList">
               <a href=""><img src="./assets/images/main.png" alt=""></a>
+              <p class="topList__txt">購入特典をゲット！</p>
             </li>
           </ul>
           <div class="p-main__mid">
@@ -232,17 +235,20 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="slick/slick.min.js"></script>
     <script type="text/javascript">
-  $('.p-slide-items').slick({
+  $(".p-slide-items").slick({
     // スライダー初期位置
-    initialSlide: 1,
+    initialSlide: 0,
     // スライダーループ無効
     infinite: false,
-    centerMode: true,
-    centerPadding: '100px',
     slidesToShow: 2,
     slidesToScroll: 1,
-    arrows: true
-});
+    arrows: true,
+    // SPのときはカルーセル無効
+    responsive: [{
+    breakpoint: 990,
+    settings: 'unslick'
+    }]
+  });
 
     //  ハンバーガーメニューがクリックされるたびにopenというクラスを付け外しする
   $(function() {
