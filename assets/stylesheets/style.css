@@ -443,6 +443,24 @@
 .p-main__contents {
   margin-top: 56px;
 }
+
+.p-main__topList p {
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  white-space: nowrap;
+}
+
+.p-main__topList {
+  position: relative;
+}
+
+
 }
 
 @media screen and (min-width: 991px) {
@@ -532,9 +550,18 @@
 .p-main__topList p {
   font-size: 50px;
   position: absolute;
-  top: 0;
-  left: 0;
-  color: rgb(255, 0, 0);
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  opacity: 0;
+}
+
+.p-main__topList:hover p {
+  opacity: 1;
+  transition:all 1s ease;
 }
 
 .p-main__topList img:hover {
